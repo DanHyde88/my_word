@@ -1,0 +1,6 @@
+<h1>Find a lost word! My word, what a good idea!</h1>
+<% if flash.alert %>
+    <div><%= flash.alert %></div>
+<% end %>
+<p><%= render 'form' %></p>
+<p><%= link_to "Back to list of words", queries_path %></p>

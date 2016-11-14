@@ -1,0 +1,14 @@
+<%= form_for(@query) do |f| %>
+  <ul>
+  <% @query.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>
+    <%= f.label :word %><br />
+    <%= f.text_field :word %>
+  </p>
+  <p>
+    <%= f.submit "get definition" %>
+  </p>
+<% end %>

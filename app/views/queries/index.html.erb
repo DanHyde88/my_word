@@ -1,0 +1,13 @@
+<h1>My words!</h1>
+
+<ul>
+    <% @queries.each do |query| %>
+    <li><%= link_to query.word, query_path(query) %></li>
+    <li><%= query.definition %></li>
+    <li><%= link_to "Delete", query_path(query), method: :delete %></li>
+    <br />
+    <% end %>
+</ul>
+
+<h1><%= link_to "Fill a gap, get a definition!", new_query_path %>
+
