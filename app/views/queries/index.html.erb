@@ -1,4 +1,8 @@
 <h1>My words!</h1>
+<h1><%= link_to "Fill a gap, get a definition!", new_query_path %>
+<h4>Word of the day:</h4>
+<p><%= @query_of_day.word %></p>
+<p><%= @query_of_day.definition %></p>
 
 <ul>
     <% @queries.each do |query| %>
@@ -8,6 +12,4 @@
     <br />
     <% end %>
 </ul>
-
-<h1><%= link_to "Fill a gap, get a definition!", new_query_path %>
 

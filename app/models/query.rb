@@ -1,4 +1,5 @@
 class Query < ApplicationRecord
+    belongs_to :user
 
     def self.find_definition(query)
         %w(rubygems wordnik).each {|lib| require lib}

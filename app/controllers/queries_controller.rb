@@ -1,6 +1,8 @@
 class QueriesController < ApplicationController
   def index
     @queries = Query.all
+    id_of_day = Query.pluck(:id).shuffle.first
+    @query_of_day = Query.find(id_of_day)
   end
 
   def show
